@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class ReversingUsingNewArray{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the length of the array : ");
+        int N = sc.nextInt();
+        int [] array = new int [N];
+        for(int i = 0; i < N; i++){
+            System.out.println("Please enter the number for array index number "+i+" : ");
+            array[i] = sc.nextInt();
+        }
+        int [] array1 = new int [N];
+        System.out.println("Reversed using a new array : ");
+        for(int j = 0; j < N; j++){
+            array1[j] = array[N-j-1];
+            System.out.print(array1[j]+" ");
+        }
+    }
+}

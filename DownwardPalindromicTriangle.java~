@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class DownwardPalindromicTriangle{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the height of the palindromic triangle: ");
+        int H = sc.nextInt();
+        for(int i = 1; i <= H; i++){
+            for(int m = 1; m < i; m++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= H; j++){
+                System.out.print(j);
+            }
+            for(int k = H-i; k > 0; k++){
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+    }
+}

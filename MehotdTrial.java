@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class MehotdTrial{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the radius: ");
+        int radius = sc.nextInt();
+        System.out.println("Please enter the type: ");
+        String word = sc.next();
+        
+    }
+}

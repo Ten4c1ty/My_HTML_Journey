@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class HourglassIncomplete{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the height of the hourglass(in odd): ");
+        int H = sc.nextInt();
+        for(int i = 1; i <= H; i++){
+            if(i == 1 || i%2 != 0){
+                for(int k = 1; k < i; k++){
+                    System.out.print(" ");
+                }
+                for(int j = 1; j <= H-i+1; j++){
+                    System.out.print(j);
+                }
+            }
+            //else if(i){
+                //for(int k = 1; k < i; k++){
+                    //System.out.print(" ");
+                //}
+                //for(int m = 1; ){
+                //}
+            //}
+        }
+    }
+}

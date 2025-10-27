@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class RockPaperScissors{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int number1 = 0;
+        int number2 = 0;
+        for(int i = 1; i<=2; i++){
+            System.out.println("Please enter your choice: ");
+            System.out.println("For 'Rock', press 1: ");
+            System.out.println("For 'Paper', press 2: ");
+            System.out.println("For 'Scissors', press 3:");
+            int number = sc.nextInt();
+            if(i == 1){
+                number1 = number;
+            }
+            else{
+                number2 = number;
+            }
+        }
+        if(number1 == 1 && number2 == 2){
+            System.out.println("Player 2 is the winner.");
+        }
+        else if(number1 == 2 && number2 == 3){
+            System.out.println("Player 2 is the winner.");
+        }
+        else if(number1 == 3 && number2 == 1){
+            System.out.println("Player 2 is the winner.");
+        }
+        else if(number1 == 1 && number2 == 3){
+            System.out.println("Player 1 is the winner.");
+        }
+        else if(number1 == 2 && number2 == 1){
+            System.out.println("Player 1 is the winner.");
+        }
+        else if(number1 == 3 && number2 == 2){
+            System.out.println("Player 1 is the winner.");
+        }
+        else{
+            System.out.println("Tie.");
+        }
+    }
+}

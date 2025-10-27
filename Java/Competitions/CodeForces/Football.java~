@@ -1,0 +1,36 @@
+import java.util.*;
+public class Football
+{
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        if(s.length() <= 100)
+        {
+            int a = s.length();
+            int 1counter = 0;
+            int 0counter = 0;
+            while(a >= 0)
+            {
+                if(s.charAt(a) == '1'){
+                    1counter++;
+                    0counter = 0;
+                }
+                else
+                {
+                    0counter++;
+                    1counter = 0;
+                }
+                --a;
+            }
+            if(1counter >= 7 || (0counter >= 7))
+            {
+                System.out.println("YES");
+            }
+            else
+            {
+                System.out.println("NO");
+            }
+        }
+    }
+}

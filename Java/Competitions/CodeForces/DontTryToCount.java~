@@ -1,0 +1,38 @@
+import java.util.*;
+public class DontTryToCount{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        if((1 <= t) && (t <= Math.pow(10, 4))){
+            for(int a = 1; a <= t; a++){
+                int n = sc.nextInt();
+                int m = sc.nextInt();
+                boolean flag = true;
+                if((1 <= (n*m)) && ((n*m) <= 25)){
+                    String x = sc.nextInt();
+                    String s = sc.nextInt();
+                    for(int b = 0; b < n; b++){
+                        if((x.CodePointAt(b) >= 97) && (x.CodePointAt(b) <= 122)){
+                            flag = true;
+                        }
+                        else{
+                            flag = false;
+                        }
+                    }
+                    for(int c = 0; c < m; c++){
+                        if((s.CodePointAt(c) >= 97) && (s.CodePointAt(c) <= 122)){
+                            flag = true;
+                        }
+                        else{
+                            flag = false;
+                        }
+                    }
+                    if(flag == true){
+                       
+                    }
+                    else{}
+                }
+            }
+        }
+    }
+}

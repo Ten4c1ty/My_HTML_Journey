@@ -1,0 +1,25 @@
+import java.util.Scanner;
+    public class Task005{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Start: ");
+        int start = sc.nextInt();
+        System.out.println("End: ");
+        int end = sc.nextInt();
+        int sum = 0;
+        int count = 0;
+        int number = 0;
+        while(start<=end){
+            count = start;
+            while(count!=0){
+                count%10 = number1;
+                sum = (number*number*number)+sum;
+            }
+            if(sum == start){
+                System.out.println("Armstrong numbers:");
+                System.out.print(start);
+            }
+            start++;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Task08{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number: ");
+        int number = sc.nextInt();
+        int temp = number;
+        int digits = 0;
+        int divisor = 1;
+        while(temp != 0){
+            temp = temp/10;
+            digits++;
+        }
+        for(int i = 1; i < digits; i++){
+            divisor*=10;
+        }
+        while(divisor != 0){
+            int digit = number/divisor;
+            System.out.print(digit);
+            number = number%divisor;
+            divisor = divisor/10;
+            if (divisor != 0){
+                System.out.print(", ");
+            }
+        }
+    }
+}

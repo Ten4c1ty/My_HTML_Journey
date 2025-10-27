@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class libraryShelves{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the total number of books: ");
+        int n = sc.nextInt();
+        System.out.println("Please enter the row capacity of each shelf: ");
+        int k = sc.nextInt();
+        int shelf = 1;
+        int sum = 0;
+        while(n>=0){
+            n -= k;
+            shelf++;
+        }
+        int extra = shelf/3;
+        System.out.println("The total number of shelves needed are "+(shelf+extra));
+    }
+}

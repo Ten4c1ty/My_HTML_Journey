@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Branching01Shopping{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter Karim's Salary: ");
+        double x = sc.nextDouble();
+        double bonus = x*75.0/100.0;
+        double totalMoney = bonus + x;
+        double wife_budget = (double)totalMoney*45/100;
+        double son_budget = totalMoney*45/100d;
+        double savings = totalMoney*10.0/100.0;
+        System.out.println("Amount with Bonus: "+totalMoney);
+        System.out.println("Wife Budget: "+wife_budget);
+        System.out.println("Son Budget: "+son_budget);
+        System.out.println("Savings: "+savings);
+        if(son_budget >= 77000.0){
+            System.out.println("Shopping Done for Son!");
+        }
+        double son_saved = son_budget-77000.0;
+        if((wife_budget+son_saved) >= 90000){
+            System.out.println("Shopping Done for Wife with remaining money from Sons budget!");
+        }
+        else if((wife_budget+son_saved) < 90000){
+            System.out.println("Cannot do shopping for wife even with remaining money from his son's budget!");
+        }
+    }
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner
+    public class Userinputdivisibility{
+    public static void main(String [] args){
+        System.out.println("Please enter you number: ");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        if(number%5 == 0){
+            if(number%7 == 0){
+                System.out.println("Inavlid:Divisible by both");
+            }
+            else{
+                System.out.println("Divisible by 5 Only");
+            }
+        }
+        else if(number%7 == 0){
+            System.out.println("Divisible by 7 Only");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+    Scanner.close
+}

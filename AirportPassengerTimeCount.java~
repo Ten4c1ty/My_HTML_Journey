@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class AirportPassengerTimeCount{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the total number of gates: ");
+        int gates = sc.nextInt();
+        double Total = 0;
+        double total = 0;
+        for(int i = 1; i <= gates; i++){
+            System.out.println("Please enter the total number of flights: ");
+            int flights = sc.nextInt();
+            for(int j = 1; j <= flights; j++){
+                System.out.println("Please enter the total number of passengers: ");
+                int passengers = sc.nextInt();
+                System.out.println("Please enter the average boarding time per passenger: ");
+                double BoardingTime = sc.nextInt();
+                total = passengers*BoardingTime;
+            }
+            System.out.println("The total boarding time for gate number "+i+" is "+total+".");
+            System.out.println("The average boarding time per passenger for gate number "+i+" is "+(total/passengers)+".");
+            Total = total * flights;
+        }
+        System.out.println("The total boarding time for all gates is "+Total+".");
+        System.out.println("The average boarding time per passenger for all gates is "+(Total/passengers)+".");
+    }
+}

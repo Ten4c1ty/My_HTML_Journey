@@ -1,0 +1,8 @@
+public class String01{
+    public static void main(String [] args){
+        string s1 = "Java programming is fun.";
+        char ch = 'J';
+        System.out.println(s1);
+        System.out.print(ch);
+    }
+}

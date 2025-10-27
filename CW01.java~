@@ -1,0 +1,34 @@
+import java.util.*;
+public class CW01{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        long a = 10;
+        long sum = 0;
+        long total = 0;
+        long max = 0;
+        long min = 9999999;
+        long avg = 0;
+        while(--a <= 0){
+            long b = sc.nextLong();
+            if((b%2 != 0) && (b > 0)){
+                sum+=b;
+                total++;
+                if(b < min){
+                    min = b;
+                }
+                if(b > max){
+                    max = b;
+                }
+                if(a == 0){
+                    System.out.println("The sum is "+sum);
+                    System.out.println("The minimum is "+min+ " .");
+                    System.out.println("The maximum is "+max+" .");
+                    System.out.println("The average is "+(sum/total)+" .");
+                }
+            }
+            else{
+                System.out.println("No odd positive numbers found.");
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class FibonacciRecursionIncomplete{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the last term of the fibonacci sequence: ");
+        int n = sc.nextInt();
+        //System.out.println(fibonacci(n));
+    }
+    /*public static int fibonacci(int num){
+        if(fibonacci(num) == fibonacci(num-1))
+            return ;
+        return 0;
+    }*/
+}

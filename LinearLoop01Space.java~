@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class LinearLoop01Space{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the initial price of an oxygen cylinder in 1999: ");
+        double priceOxygen = sc.nextDouble();
+        System.out.println("Please enter the initial price of a unit of water reserve in 1999: ");
+        double priceWater = sc.nextDouble();
+        System.out.println("Please enter the monthly inflation rate (percentage) for oxygen cylinders: ");
+        double p = sc.nextDouble();
+        System.out.println("Please enter the monthly inflation rate (percentage) for water reserves: ");
+        double q = sc.nextDouble();
+        double percentageOxygen = 0;
+        double percentageWater = 0;
+        double time = 26*12;
+        for(double i = 1; i<=time; i++){
+            percentageOxygen = percentageOxygen+((p/100)+1);
+            percentageWater = percentageWater+((q/100)+1);
+        }
+        System.out.println("Current price of an oxygen cylinder: "+priceOxygen*percentageOxygen+" Taka");
+        System.out.println("Current price of a unit of water reserve: "+priceWater*percentageWater+" Taka");
+        if(priceOxygen*percentageOxygen > priceWater*percentageWater){
+            System.out.println("The price of oxygen cylinders has increased more.");
+        }
+        else if(priceOxygen*percentageOxygen < priceWater*percentageWater){
+            System.out.println("The price of water reserves has increased more.");
+        }
+        else{
+            System.out.println("The price of both is same.");
+        }
+    }
+}

@@ -1,0 +1,18 @@
+public class Test00001{
+    public static void main(String [] args){
+        System.out.println("bye");
+        System.out.println(fullMoon(4));
+    }
+    public static int fullMoon(int num){
+        if(num < 1){
+            int prod = num * num * num;
+            return prod;
+        }
+        //else if(){
+            //return 
+        //}
+        else{
+            return num+fullMoon(num-3);
+        }
+    }
+}

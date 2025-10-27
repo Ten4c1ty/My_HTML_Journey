@@ -1,0 +1,6 @@
+import java.util.Arrays;
+public class ArrayDuplicateLess{
+    public static void main(String [] args){
+        int arr [] = {23, 100, 23, 56, 100};
+    }
+}

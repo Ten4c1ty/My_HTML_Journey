@@ -1,0 +1,15 @@
+import java.util.scanner
+    public class Task002{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the length of the rectangle: ");
+        int length = sc.nextInt();
+        System.out.println("Please enter the width of the rectangle: ");
+        int width = sc.nextInt();
+        for(int l = 1; l <= length; l++){
+            for(int w = 1; w <= width; w++){
+                System.out.print(w)
+            }
+        }
+    }
+}

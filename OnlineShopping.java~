@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class OnlineShopping{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the number of products purchased: ");
+        int products = sc.nextInt();
+        int discount = 0;
+        for(int i = 1; i<=products; i++){
+            System.out.println("Cost of product number "+i+" : ");
+            double cost = sc.nextDouble();
+            System.out.println("Quantity of product number "+i+" : ");
+            int quantity = sc.nextInt();
+            System.out.println("Which category is the product of ?");
+            String category = sc.nextLine();
+            cost *= quantity;
+            System.out.println("The total cost of "+i+" product before discounts is "+cost+" .");
+            if(quantity > 10){
+                discount += cost*10/100;
+                cost -= discount;
+            }
+            if(category == "electronics"){
+                discount += cost*5/100;
+                cost -= discount;
+            }
+            else if(category == "clothing"){
+                discount += cost*15/100;
+                cost -= discount;
+            }
+            System.out.println("The total discount is "+discount+" .");
+            System.out.println("The total cost after discounts is "+cost+" .");
+        }
+    }
+}

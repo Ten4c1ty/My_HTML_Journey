@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Seriesof7{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your Nth term: ");
+        int N = sc.nextInt();
+        int sum = 0;
+        int counter = 1;
+        boolean flag = true;
+        if(flag){
+            if(counter == 1 || counter == 2){
+                sum += 7;
+                counter++;
+            }
+            else{
+                sum -= 7;
+                counter = 1;
+            }
+            i++;
+            if(i == N){
+                System.out.println("The sum of the series is "+sum+" .");
+            }
+        }
+    }
+}

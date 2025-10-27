@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class PirateTreasureHunt{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the hidden pass: ");
+        String words = sc.nextLine();
+        for(int i = 0; i < words.length(); i++){
+            int convert = (int) words.charAt(i);
+            if((convert <= 122 && convert >= 97) || (convert >= 65 && convert <= 90)){
+                if(convert == 97 | 101 | 105 | 111 | 117){
+                    System.out.print((char) convert);
+                }
+            }
+        }
+    }
+}

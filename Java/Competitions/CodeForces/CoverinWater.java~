@@ -1,0 +1,35 @@
+import java.util.*;
+public class CoverinWater{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int dcounter = 0;
+        int hcounter = 0;
+        int total = 0;
+        int t = sc.nextInt();
+        if((1 <= t) && (t <= 100)){
+            for(int a = 1; a <= t; a++){
+                int n = sc.nextInt();
+                String s = sc.nextLine();
+                if((1 <= n) && (n <= 100)){
+                    for(int b = 0; b < n; b++){
+                        if(s.charAt(b) == '.'){
+                            dcounter++;
+                        }
+                        else if(s.charAt(b) == '#'){
+                            dcounter = 0;
+                        }
+                        total += dcounter;
+                        if(dcounter == 3){
+                            System.out.println(2);
+                            break;
+                        }
+                        else if(b == (n-1)){
+                            System.out.println(total);
+                        }
+                    }
+                }
+            }
+        }
+        else{}
+    }
+}

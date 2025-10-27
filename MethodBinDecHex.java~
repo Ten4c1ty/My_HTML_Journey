@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class MethodBinDecHex{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a binary number: ");
+        String binary = sc.next();
+        int decimal = toDecimal(binary);
+        //String hex = toHex(decimal);
+        //System.out.println(hex);
+    }
+    public static int toDecimal(String str){
+        int num1 = (int) str;
+        System.out.println(num1);
+    }
+}

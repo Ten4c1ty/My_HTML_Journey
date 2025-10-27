@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Method1{
+    public static void main(String [] args){
+        
+    }
+    public static String evenChecker(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number: ");
+        int even = sc.nextInt();
+        if(even%2 == 0){
+            System.out.println("Even!!");
+        }
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class ArrayRecursion{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the length of the array: ");
+        int N = sc.nextInt();
+        int [] arr = new int [N];
+        for(int i = 0; i < N; i++){
+            System.out.println("Please enter element number "+(i+1)+" : ");
+            arr[i] = sc.nextInt();
+        }
+        System.out.println(Arrays.toString(arr));
+        //int[] arr = {5, 6, 2, 1, 8, 7};
+        System.out.println("Please enter the required index to start printing: ");
+        int index = sc.nextInt();
+        print_element(arr, index);
+    }
+    public static void print_element(int[] arr1, int idx){
+        if(idx == arr1.length-1)
+            System.out.println(arr1[idx]);
+        else{
+            System.out.println(arr1[idx]);
+            print_element(arr1, idx+1);
+        }
+    }
+}

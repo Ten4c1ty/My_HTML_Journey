@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class MovieStreamApp{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please select your plan: ");
+        System.out.print("For 'Standard Plan of 3 months', please select 1: ");
+        int standard = sc.nextInt();
+        if(standard == 1){
+            System.out.println("The facilities you will get are: ");
+            System.out.println("Watching 1 screen, ");
+            System.out.println("3 device logins, ");
+            System.out.println("300 tk monthly payment.");
+            System.out.println("In total, you have to pay "+(300*3)+" tk.");
+        }
+        else{
+            System.out.print("For 'Premium Plan of 12 months', please select 2: ");
+            int premium = sc.nextInt();
+            if(premium == 2){
+                System.out.println("The facilities you will get are: ");
+                System.out.println("Watching 3 screens at a time, ");
+                System.out.println("5 device logins, ");
+                System.out.println("15% lower monthly payment than standard plan.");
+                System.out.println("In total, you have to pay "+((300*12)-(300*12*15/100))+" tk.");
+            }
+            else{
+                System.out.println("Invalid");
+            }
+        }
+    }
+}

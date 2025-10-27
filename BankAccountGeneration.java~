@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class BankAccountGeneration{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the branch code : ");
+        int N =sc.nextInt();
+        System.out.println("Please enter the customer ID : ");
+        int M =sc.nextInt();
+        for(int i = 1; i<Math.pow(10, N); i++){
+            for(int j = 1; j<Math.pow(10, M); j++){
+                System.out.print(ij);
+            }
+        }
+    }
+}

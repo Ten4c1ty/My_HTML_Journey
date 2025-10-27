@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class MarathonRecordTime{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("The amount of days practiced by me: ");
+        int x = sc.nextInt();
+        double xsum = 0;
+        for(int i = 1; i <= x; i++){
+            System.out.println("The speed of day number "+i+" : ");
+            double speedx = sc.nextDouble();
+            xsum += speedx;
+        }
+        System.out.println("The average speed of me is "+(xsum/x)+" km/h .");
+        System.out.println("The estimated time needed to finish the race by me is "+((xsum/x)/5.0)+" hours. ");
+        System.out.println("The amount of days practiced by my friend: ");
+        int y = sc.nextInt();
+        double ysum = 0;
+        for(int j = 1; j <= y; j++){
+            System.out.println("The speed of day number "+j+" : ");
+            double speedy = sc.nextDouble();
+            ysum += speedy;
+        }
+        System.out.println("The average speed of my friend is "+(ysum/y)+" km/h .");
+        System.out.println("The estimated time needed to finish the race by my friend is "+((ysum/y)/5.0)+" hours. ");
+    }
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class FibonacciInvestmentGrowth{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the first N terms: ");
+        int N = sc.nextInt();
+        int first = 0;
+        int second = 1;
+        int sum = 0;
+        System.out.println(first+"%");
+        for(int i = 3; i <= N;i++){
+            System.out.println(second+"%");
+            sum = first + second;
+            first = second;
+            second = sum;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+import java.util.*;
+public class MissingNumber{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        if((2 <= n) && (n <= 200000)){
+            long arr[] = new long [n-1];
+            for(long a = 0; a < (n-1); a++){
+                arr[a] = sc.nextLong();
+            }
+        }
+        for(long b = 1; b <= n; b++){
+            long counter = 0;
+            for(long c = 0; c < (n-1); c++){
+                if(arr[c] == b){
+                    counter++;
+                    break;
+                }
+            }
+            if(counter == 0){
+                System.out.println(b);
+                break;
+            }
+        }
+    }
+}

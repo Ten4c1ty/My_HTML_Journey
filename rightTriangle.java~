@@ -1,0 +1,18 @@
+//import java.util.Scanner;
+public class rightTriangle{
+    public static void main(String [] args){
+        //Scanner sc = new Scanner(System.in);
+        int height = 4;
+        int m = height-1;
+        while(m>=0){
+            for(int l = 1;l<height-m;l++){
+                System.out.print(" ");
+            }
+            for(int i = height;i<=m;i--){
+            System.out.print(i);
+            }
+            System.out.println("");
+            m--;
+        }
+    }
+}

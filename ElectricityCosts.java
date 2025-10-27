@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ElectricityCosts{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("The total unit of electricity used by Jane: ");
+        double x = sc.nextInt();
+        System.out.println("Did she install solar panels? ");
+        boolean SolarPanel= sc.nextBoolean();
+        System.out.println("Did she use energy-saving plan? ");
+        boolean energy_saving= sc.nextBoolean();
+        if(energy_saving){
+            x = x - (x*40/100);
+        }
+        double bill = x*9;
+        if(SolarPanel){
+            bill = bill - (bill*30/100);
+        }
+        if(x > 500.00){
+            bill = bill + (bill*20/100);
+        }
+        System.out.println("Jane's total bill is "+bill+" .");
+    }
+}

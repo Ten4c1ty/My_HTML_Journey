@@ -1,0 +1,32 @@
+import java.util.*;
+public class WayTooLongWords{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean flag = true;
+        int counter = 0;
+        if((1 <= n) && (n <= 100)){
+            String s = sc.next();
+            for(int a = 0; a < n; a++){
+            if(s.codePointAt(a) ){
+                flag = true;
+            }
+            else{
+                flag = false;
+            }
+            }
+            if(flag == true){
+                if(s.length <= 10){
+                    System.out.println(s);
+                }
+                else{
+                    for(int b = 1; b < (n-1); b++){
+                        counter++;
+                    }
+                    System.out.println(s.charAt(0) + counter + s.charAt(s.length-1));
+                }
+            }
+            else{}
+        }
+    }
+}

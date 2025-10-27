@@ -1,0 +1,17 @@
+import java.util.Scanner;
+    public class Task003{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Start: ");
+        int start = sc.nextInt();
+        System.out.println("End: ");
+        int end = sc.nextInt();
+        for(int num=start; num <= end; num++){
+            for(int i = 2; i<num/2; i++){
+                if(num%i!=0){
+                System.out.println(num);
+            }
+        }
+    }
+    }
+    }

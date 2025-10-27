@@ -1,0 +1,13 @@
+import java.util.*;
+public class Task3Ass1{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        long N = sc.nextLong();
+        long arr[] = new long [(int)N];
+        for(long a = 0; a < N; a++){
+            arr[(int)a] = sc.nextLong();
+        }
+        for(){
+        }
+    }
+}

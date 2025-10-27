@@ -1,0 +1,20 @@
+import java.util.*;
+public class CW02{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        String s = "";
+        long sum = 0;
+        for(long a = 0; a < 2; a++){
+            String s1 = sc.nextLine();
+            String s += s1 + " ";
+        }
+        for(long b = 0; b < s.length(); b++){
+            int ascii = (int) s.charAt(b);
+            if(((ascii >= 65) && (ascii <= 90)) || ((ascii >= 97) && (ascii <= 122))){
+                sum+= ascii;
+            }
+        }
+        System.out.println(s);
+        System.out.println(sum);
+    }
+}

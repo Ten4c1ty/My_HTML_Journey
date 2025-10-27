@@ -1,0 +1,35 @@
+import java.util.*;
+public class Team{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int solve = 0;
+        if((1 <= n) && (n <= 1000)){
+            for(int a = 1; a <= n; a++){
+                int arr[] = new int [3];
+                int counter = 0;
+                boolean flag = false;
+                for(int b = 0; b < 3; b++){
+                    arr[b] =  sc.nextInt();
+                    if((arr[b] == 0) || (arr[b] == 1)){
+                        flag = true;
+                    }
+                    else{}
+                }
+                if(flag == true){
+                    for(int c = 0; c < 3; c++){
+                        if(arr[c] == 1){
+                            counter++;
+                        }
+                    }
+                    if(counter > 1){
+                        solve++;
+                    }
+                }
+                else{}
+            }
+            System.out.println(solve);
+        }
+        sc.close();
+    }
+}

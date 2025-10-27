@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class CarRental{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please select the car type you want to: ");
+        System.out.print("Economy (costs 1000 Taka): ");
+        boolean economy = sc.nextBoolean();
+        System.out.print("Standard (costs 1500 Taka): ");
+        boolean standard = sc.nextBoolean();
+        System.out.print("Luxury (costs 2000 Taka): ");
+        boolean luxury = sc.nextBoolean();
+    }
+}

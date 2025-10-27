@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class RestaurantHourDiscount{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the total price : ");
+        double price = sc.nextDouble();
+        System.out.println("Please enter the time (in hour) : ");
+        int hour = sc.nextInt();
+        System.out.println("Is it AM ? ");
+        boolean flag = sc.nextInt();
+        int discount = 0;
+        if(flag){
+            if(hour < 8){
+                System.out.println("Sorry, but the restaurant is closed.");
+            }
+            else if(hour < 10 && hour >= 8){
+                System.out.println("Sorry but no discount is available at the moment. ");
+            }
+            else if(12 >= hour && hour >= 10){
+                System.out.println("The percentage of discount is "+hour+"%. ");
+                discount = hour * price;
+            }
+            else{
+                System.out.println("Invalid. ");
+            }
+        }
+        else{
+            if(hour>=1){
+                System.out.println("The percentage of discount is "+hour+"%. ");
+                discount = hour * price;
+            }
+            else if(hour>10 && hour<=12){
+                System.out.println("Sorry but the restaurant is closed now.");
+            }
+            else{
+                System.out.println("Invalid.");
+            }
+        }
+        System.out.println("The amount of discount is "+discount+" tk.");
+        System.out.println("The amount of total price after discount is "+price-discount+" tk.");
+    }
+}

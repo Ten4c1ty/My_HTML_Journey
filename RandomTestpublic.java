@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class RandomTestpublic {
+    public static void main(String[] args) throws IOException {
+      
+        // Create BufferedReader to read input efficiently
+        BufferedReader br = new BufferedReader
+          (new InputStreamReader(System.in));
+        
+        // Read the first line and split it into tokens
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        // Read the total number of integers (n) and the divisor (k)
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
+       
+        // Initialize counter for divisible numbers
+        int count = 0; 
+
+        // Process each integer
+        while (n-- > 0) {
+          
+             // Read the next integer
+            int x = Integer.parseInt(br.readLine());
+          
+            // Check if the number is divisible by k
+            if (x % k == 0) 
+                count++; 
+        }
+
+        System.out.println(count);
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class MethodHappyNumber{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number: ");
+        int HappyNumber = sc.nextInt();
+        boolean check = isHappyNumber(HappyNumber);
+        System.out.println(check);
+    }
+    public static boolean isHappyNumber(int num){
+        int counter = 0;
+        int square = 0;
+        for(int i = num; num > 0; counter++){
+            int remainder = i%10;
+            i /= 10;
+            square += (remainder*remainder);
+        }
+        if(square == 1){
+            return true;
+        }
+    }
+}

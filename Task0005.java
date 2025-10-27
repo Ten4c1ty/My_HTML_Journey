@@ -1,0 +1,31 @@
+import java.util.Arrays;
+public class Task0005{
+    public static void main(String [] args){
+        int [] marks = {85, 90, 75, 44, 99};
+        String [] names = {"Bob", "Alice", "Max", "Marry", "Rosy"};
+        /*for(int i = 0; i< marks.length; i++){
+            names[i] = marks[i];
+        }*/
+        for(int i = 0; i < marks.length-1; i++){
+            for(int j = 0; j < marks.length-i-1; j++){
+                if(marks [j] > marks [j+1]){
+                    int temp = marks [j];
+                    marks [j] = marks [j+1];
+                    marks [j+1] = temp;
+                }
+            }
+        }
+        /*for(int i = 0; i < names.length-1; i++){
+            for(int j = 0; j < names.length-i-1; j++){
+                if(names [j] > names [j+1]){
+                    int temp = names [j];
+                    names [j] = names [j+1];
+                    names [j+1] = temp;
+                }
+            }
+        }*/
+        System.out.println("Sorted Array:");
+        System.out.println(Arrays.toString(marks));
+        System.out.println(Arrays.toString(names));
+    }
+}

@@ -1,0 +1,32 @@
+import java.util.*;
+public class Repititions{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        long counter = 0;
+        long previous = 0;
+        for(int a = 0; a < s.length(); a++){
+            if(a < (s.length()-1)){
+                if(s.charAt(a) == s.charAt(a+1)){
+                    counter += 2;
+                    a++;
+                }
+                else if(s.charAt(a) != s.charAt(a+1)){
+                    if(previous < counter){
+                        previous = counter;
+                        counter = 0;
+                    }
+                    counter++;
+                }
+            }
+            else if(s.charAt(a) != s.charAt(a+1)){
+                    if(previous < counter){
+                        previous = counter;
+                        counter = 0;
+                    }
+                    counter++;
+                }
+        }
+        System.out.print(previous);
+    }
+}

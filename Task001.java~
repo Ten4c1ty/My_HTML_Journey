@@ -1,0 +1,20 @@
+import java.util.Scanner;
+    public class Task001{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the number of test cases: ");
+        int N = sc.nextInt();
+        System.out.println("Please enter the starting number: ");
+        int X = sc.nextInt();
+        System.out.println("Please enter the number of odd numbers: ");
+        int Y = sc.nextInt();
+        int count = 1;
+        for(int i =2; count<=Y; count++){
+            if(X%i != 0){
+                sum += X;
+            }
+            X++;
+        }
+        System.out.println(sum);
+    }
+}

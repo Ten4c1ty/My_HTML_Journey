@@ -1,0 +1,42 @@
+import java.util.Scanner;
+    public class Change{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the amount the customer need to pay(Taka): ");
+        int expense = sc.nextInt();
+        System.out.println("Enter the amount, customer gave(Taka): ");
+        int paid = sc.nextInt();
+        if(paid>expense){
+            int total = paid - expense;
+            int hundred = total/100;
+            int remainder1 = total%100;
+            int fifty = remainder1/50;
+            int remainder2 = total%50;
+            int twenty = remainder2/20;
+            int remainder3 = total%20;
+            int ten = remainder3/10;
+            int remainder4 = total%10;
+            int five = remainder4/5;
+            int remainder5 = total%5;
+            int two = remainder5/2;
+            int remainder6 = total%2;
+            int one = remainder6/1;
+            System.out.println("The returned amount is "+total+" taka");
+            System.out.println("100 taka note: "+hundred);
+            System.out.println("50 taka note: "+fifty);
+            System.out.println("20 taka note: "+twenty);
+            System.out.println("10 taka note: "+ten);
+            System.out.println("5 taka note: "+five);
+            System.out.println("2 taka note: "+two);
+            System.out.println("1 taka note: "+one);
+        }
+        else if(paid==expense){
+            int total = paid - expense;
+            System.out.println("The returned amount is "+total+" taka");
+        }
+        else{
+            int total = expense-paid;
+            System.out.println("Please pay "+total+" taka more");
+        }
+    }
+}

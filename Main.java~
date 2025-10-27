@@ -1,0 +1,66 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        String[] planets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter"};
+        double[] x_coordinates = {0.39, 0.72, 1.00, 1.52, -5.20};
+        double[] y_coordinates = {0.24, 0.00, 0.00, 0.99, 2.86};
+        double[] z_coordinates = {-0.10, 0.44, -0.02, 0.21, 0.42};
+        System.out.println("Please enter the name of the planet: ");
+        String pla = sc.nextLine();
+        double minimum1 = 0;
+        double minimum2 = 0;
+        double minimum = 0;
+        int counter = 0;
+        for(int i = 0; i < planets.length; i++){
+            for(int j = 0; j < pla.length(); j++){
+                String plan = planets[i];
+                if(plan.length() > pla.length())
+                    break;
+                else if(plan.length() < pla.length())
+                    break;
+                else{
+                    if(pla.charAt(j) == plan.charAt(j)){
+                        counter++;
+                    }
+                }
+            }
+            if(counter == pla.length()){
+                double x1 = x_coordinates[i]-x_coordinates[i+1];
+                double x2 = x_coordinates[i]-x_coordinates[i-1];
+                double power1 = Math.pow(x1, 2);
+                double power2 = Math.pow(x2, 2);
+                System.out.println(power1);
+                System.out.println(power2);
+                minimum1 += power1;
+                minimum2 += power2;
+                double y1 = y_coordinates[i]-y_coordinates[i+1];
+                double y2 = y_coordinates[i]-y_coordinates[i-1];
+                power1 = Math.pow(y1, 2);
+                power2 = Math.pow(y2, 2);
+                System.out.println(power1);
+                System.out.println(power2);
+                minimum1 += power1;
+                minimum2 += power2;
+                double z1 = z_coordinates[i]-z_coordinates[i+1];
+                double z2 = z_coordinates[i]-z_coordinates[i-1];
+                power1 = Math.pow(z1, 2);
+                power2 = Math.pow(z2, 2);
+                System.out.println(power1);
+                System.out.println(power2);
+                minimum1 += power1;
+                minimum2 += power2;
+                counter = 0;
+            }
+            if(minimum1 < minimum2){
+                minimum = minimum1;
+                break;
+            }
+            else{
+                minimum = minimum2;
+                break;
+            }
+        }
+        System.out.println("Distance: "+minimum);
+    }
+}

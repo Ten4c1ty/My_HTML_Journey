@@ -1,0 +1,35 @@
+/*import java.util.Scanner;
+public class Recursion01{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the total numbers: ");
+        int N = sc.nextInt();
+        oneToN(1, N);
+    }
+    public static int oneToN(int num1, int num2){
+        if(num1 <= num2){
+            return num1;
+        }
+        oneToN(num1++, num2);
+        System.out.println(num1+" ");
+    }
+}*/
+public class Recursion01{
+    public static void oneToN(int n){
+        if (n < 1) {
+            return;
+        }
+        oneToN(n - 1);
+        System.out.print(n + " ");
+    }
+    public static void main(String [] args){
+        System.out.println("Sample Input: N = 5");
+        System.out.print("Output: ");
+        oneToN(5);
+        System.out.println();
+        System.out.println("\nSample Input: N = 11");
+        System.out.print("Output: ");
+        oneToN(11);
+        System.out.println();
+    }
+}

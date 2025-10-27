@@ -1,0 +1,10 @@
+//Convert minutes into years and days
+public class _Conversion{
+    public static void main (String args[]){
+    int num1 = 3456789/(24*60*365) ;
+    double num2 = (num1 - 6) ;
+    //int num3 = num2 * 365 ;
+    System.out.println(num1) ;
+    System.out.println(num2) ;
+    }
+}

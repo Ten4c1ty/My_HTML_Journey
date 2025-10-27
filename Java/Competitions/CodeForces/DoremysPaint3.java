@@ -1,0 +1,31 @@
+import java.util.*;
+public class DoremysPaint3{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        if((1 <= t) && (t <= 100)){
+            for(int a = 1; a <= t; a++){
+                int n = sc.nextInt();
+                int [] arr = new int [n];
+                boolean flag = true;
+                if((2 <= n) && (n <= 100)){
+                    for(int b = 0; b < n; b++){
+                        arr[b] = sc.nextInt();
+                        if((arr[b] >= 1) && (arr[b] <= Math.pow(10, 5))){
+                            flag = true;
+                        }
+                        else{
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if(flag == true){
+                       
+                    }
+                    else{}
+                }
+            }
+        }
+        sc.close();
+    }
+}

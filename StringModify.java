@@ -1,0 +1,31 @@
+/*import java.util.Scanner;
+public class StringModify{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a collection of letters: ");
+        String S = sc.nextLine();
+        System.out.println("Please enter the part you want to remove in the above string: ");
+        String S1 = sc.nextLine();
+        System.out.println("Please enter the string with which you want to exchange: ");
+        String S2 = sc.nextLine();
+        String newS = "";
+        int counter = 0;
+        for(int i = 0; i < S.length(); i++){
+            for(int j = 0; j < S1.length(); j++){
+                if(S.charAt(i) == S1.charAt(j)){
+                    counter++;
+                    if(counter == S1.length()){
+                        newS += S2;
+                    }
+                }
+                else{
+                    break;
+                }
+            }
+            if(counter == 0){
+                newS += S.charAt(i);
+            }
+        }
+        System.out.println("The modified string is "+newS+" .");
+    }
+}*/

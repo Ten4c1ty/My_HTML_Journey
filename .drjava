@@ -1,0 +1,20 @@
+#DrJava configuration file
+#Tue Oct 14 22:20:43 BDT 2025
+font.main = Monospaced-BOLD-18
+font.line.numbers = Monospaced-BOLD-18
+font.doclist = Monospaced-12
+lineenum.enabled = true
+key.delete.next = [shift DELETE]
+key.delete.previous = [shift BACK_SPACE]
+quit.prompt = false
+indent.level = 4
+recent.files = [C:\\Users\\User\\AirportPassengerTimeCountIncomplete.java,C:\\Users\\User\\AlternatingString.java,C:\\Users\\User\\AppTrackerIncomplete.java,C:\\Users\\User\\ArrayCreation.java,C:\\Users\\User\\ArrayDuplicateLessIncomplete.java]
+window.height = 1048
+window.width = 1936
+window.x = -8
+window.y = -8
+window.state = 6
+doc.list.width = 145
+last.dir = C:\\Users\\User\\test.java
+last.interactions.dir = C:\\Users\\User
+tabbedpanes.state = 960 540 700 400

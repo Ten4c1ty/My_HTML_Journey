@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class BankPinCode{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your PIN code: ");
+        long pin = sc.nextLong();
+        int counter = 0;
+        for(long i = pin; i <0; counter++){
+            i=i/10;
+        }
+        System.out.println(counter);
+    }
+}

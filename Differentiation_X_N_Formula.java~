@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Differentiation_X_N_Formula{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the highest value of the variable: ");
+        long highest = sc.nextLong();
+        System.out.println("Please enter the lowest value of the variable: ");
+        long lowest = sc.nextLong();
+        System.out.println("Please enter the degree of the variable: ");
+        long power = sc.nextLong();
+        for(int i = 1; i < power; i++){
+            long highest_power *= highest;
+        }
+        for(int i = 1; i < power; i++){
+            long lowest_power *= lowest;
+        }
+        long answer = (highest_power - lowest_power)/power;
+    }
+}

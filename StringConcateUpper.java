@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class StringConcateUpper{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please type string number 1: ");
+        String number1 = sc.nextLine();
+        System.out.println("Please type string number 2: ");
+        String number2 = sc.nextLine();
+        String words = "";
+        String new_word = "";
+        int counter = 0;
+        for(int i = 0; i < number1.length(); i++){
+            for(int j = 0; j < number2.length(); j++){
+                if(number1.charAt(i) == number2.charAt(j)){
+                    counter++;
+                }
+            }
+            if(counter == 0){
+                words += number1.charAt(i);
+            }
+            counter = 0;
+        }
+        for(int k = 0; k < number2.length(); k++){
+            for(int m = 0; m < number1.length(); m++){
+                if(number1.charAt(m) == number2.charAt(k)){
+                    counter++;
+                }
+            }
+            if(counter == 0){
+                words += number2.charAt(k);
+            }
+            counter = 0;
+        }
+        for(int n = 0; n < words.length(); n++){
+            int convert = (int) words.charAt(n);
+            if(convert >= 97 && convert <= 122){
+                convert -= 32;
+            }
+            char ch = (char) convert;
+            new_word += ch;
+        }
+        System.out.println("The output is "+new_word+" .");
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class RightJustifiedTriangle{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the last number you want to see: ");
+        int N = sc.nextInt();
+        for(int i = N-1; i<N; i--){
+            System.out.print(" ");
+            for(int j = 1; j<=N; j++){
+                System.out.println(j);
+            }
+            System.out.println();
+        }
+    }
+}

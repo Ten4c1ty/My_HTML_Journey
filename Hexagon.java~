@@ -1,0 +1,8 @@
+public class Hexagon{
+    public static void main (String args[]){
+        int a = 8;
+        int b = 3;
+        int area = (4*b*(a/2)*.5);
+        System.out.println(area);
+    }
+}

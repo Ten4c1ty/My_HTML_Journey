@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class GymPlan${
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the basic plan cost: ");
+        double x = sc.nextDouble();
+        System.out.println("Please enter Cody's budget: ");
+        double y = sc.nextDouble();
+        double swimPlan = x + (x*15.0/100.0);
+        double premPlan = x + (x*30/100d);
+        if(y >= premPlan){
+            System.out.println("Cody can afford premium plan.");
+        }
+        else if(y >= swimPlan){
+            System.out.println("Cody can afford basic plan and swimming club.");
+        }
+        else{
+            System.out.println("Cody needs "+(swimPlan-y)+" more money for basic plan and swimming club and needs "+(premPlan-y)+" more money for premium plan."));
+        }
+    }
+}

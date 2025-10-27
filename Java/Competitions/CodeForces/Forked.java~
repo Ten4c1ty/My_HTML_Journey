@@ -1,0 +1,23 @@
+import java.util.*;
+public class Forked{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        long t = sc.nextLong();
+        if((1 <= t) && (t <= 1000)){
+            while(t > 0){
+                long a = sc.nextLong();
+                long b = sc.nextLong();
+                if((1 <= a) && (a <= Math.pow(10, 8)) && (1 <= b) && (b <= Math.pow(10, 8))){
+                    long xK = sc.nextLong();
+                    long yK = sc.nextLong();
+                    long xQ = sc.nextLong();
+                    long yQ = sc.nextLong();
+                    if((0 <= xK) && (xK <= Math.pow(10, 8)) && (0 <= yK) && (yK <= Math.pow(10, 8)) && (0 <= xQ) && (xQ <= Math.pow(10, 8)) && (0 <= yQ) && (yQ <= Math.pow(10, 8)) && (xK != xQ) && (yQ != yK)){
+                        
+                    }
+                }
+                --t;
+            }
+        }
+    }
+}

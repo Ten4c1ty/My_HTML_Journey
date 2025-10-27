@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class MethodForDeterminingTax{
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your age: ");
+        int age = sc.nextInt();
+        System.out.println("Do you want to do monthly? ");
+        boolean isMonth = sc.nextBoolean;
+        if(boolean){
+            System.out.println("Please enter you salary for the month: ");
+            int salary = sc.nextInt();
+        }
+        else{
+            for(int i = 1; i <= 12; i++){
+                System.out.println("Please enter you salary for month number "+i+": ");
+                int salary = sc.nextInt();
+            }
+        }
+        double t = calcTax(age, salary);
+        System.out.print(t);
+        calcYearlyTax(age, salary);
+    }
+    public static double calcTax(double num1, double num2){
+        if(num1 >= 18){
+            if(num2 > 20000.00){
+                return (num2*14/100);
+            }
+            else if(num2 <= 20000 && num2 >= 10000){
+                return (num2*7/100);
+            }
+            else{
+                return 0;
+            }
+        }
+        else{
+            return 0;
+        }
+    }
+    public static void calcYearlyTax(double age1, double salary){
+        
+    }
+}
